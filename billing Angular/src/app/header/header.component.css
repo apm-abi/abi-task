@@ -1,0 +1,22 @@
+
+.head-top {
+  /* background-color: black; */
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.head-top img {
+  width: 100px;
+  height: 40px;
+}
+.hello {
+  border: 1px solid white;
+  height: 40px;
+  text-align: center;
+}
+
+
+.hello p {
+    margin-top: -10px;
+}

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title> </title>
+    <link rel="stylesheet" type="text/css" href="js.css" />
+  </head>
+  <body>
+    <div class="outer-box1">
+      <div class="outer-box">
+        <div class="date">
+          <label>Month</label> <input type="text" id="m" /><br /><br />
+          <label>Year</label> <input type="text" id="y" /><br /><br />
+        </div>
+        <div class="button">
+          <input type="button" value="check" onclick="myFunction()" />
+        </div>
+        <div class="display" id="result"></div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        var year;
+        year = document.getElementById("y").value;
+        var month;
+        month = document.getElementById("m").value;
+        var day;
+        var a = new Date();
+        var b = a.getFullYear();
+        var c = a.getMonth();
+        var e = b - year;
+        var f = c - month;
+        if (f < 0) {
+          g = f + 12;
+          h = e - 1;
+          //  alert(`${g} month and ${h} age `);
+          document.getElementById("result").innerHTML =
+            "Your age is " + h + "Month" + g;
+        } else {
+          //alert(`${f} month and ${e} age `);
+          document.getElementById("result").innerHTML =
+            "Your age is " + e + "Month" + f;
+        }
+      }
+    </script>
+  </body>
+</html>

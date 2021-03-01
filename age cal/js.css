@@ -1,0 +1,29 @@
+.outer-box1 {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .outer-box {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  .date {
+  }
+  .button {
+    background-color: chartreuse;
+    color: darkcyan;
+  }
+  .display {
+    border: 2px solid black;
+    padding: px;
+    width: 100px;
+    height: 50px;
+  }
+  
