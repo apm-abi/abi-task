@@ -1,0 +1,116 @@
+ .foot {
+    margin-top:50px ;
+    width: 100%;
+    height: 325px;
+ }
+ .foot-up { 
+    width: 100%;
+    height: 50px;
+    background-color: black; 
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot-up button {
+    margin-left: 40px;
+    color: black;
+    background-color: crimson;
+}
+.foot-up button:hover {
+    color:aquamarine;
+    background-color: white;
+    border-style:dotted;
+    border: 2px solid chartreuse;
+}
+.foot-center {
+    width: 100%;
+    height: 272px;
+    background-color:  #232F3E; 
+}
+.foot-center-1 {
+    /* border: 1px solid white; */
+    height: 172px;
+    color: white;  
+    margin-left: 300px;
+    width: 200px;   
+    float: left;
+    margin-top: 21px;
+}
+.foot-center-1 span {
+    font-size: x-large;
+    color:#d22a45;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.foot-center-1 ul li {
+    list-style-type: none;
+}
+.foot-center-1 ul li a {
+    text-decoration: none;
+    color: cornsilk;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.foot-center-2 {
+    /* border: 1px solid white; */
+    height: 150px;
+    color: white;  
+    width: 200px;   
+    margin-top: 43px;
+    margin-left: 70px;
+    float: left;
+
+}
+.foot-center-2 ul li {
+    list-style-type: none;
+}
+.foot-center-2 ul li a {
+    text-decoration: none;
+    color: cornsilk;
+    display: flex;
+}
+.foot-center-3 {
+    /* border: 1px solid white; */
+    height: 173px;
+    color: white;  
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 76px;   
+    float: left;
+}
+.foot-center-3 span {
+    font-size: x-large;
+    color:#d22a45;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.foot-center-3 ul li {
+    list-style-type: none;
+}
+.foot-center-3 ul li a {
+    text-decoration: none;
+    color: cornsilk;
+    display: flex;
+    
+}
+.foot-center-3 mat-icon {
+    color:brown;
+    margin-right: 10px;
+}
+
+.foot-down {
+    width: 100%;
+    height: 25px;
+    background-color: black; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

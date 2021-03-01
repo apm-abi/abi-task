@@ -1,0 +1,70 @@
+
+<mat-sidenav-container class="example-container">
+    
+    <mat-sidenav  class="mat-elevation-z8"  mode="side" opened>
+      <mat-nav-list>
+
+        <mat-list-item><mat-icon>arrow_forward_ios</mat-icon>TOP CATEGORIES</mat-list-item> 
+        <mat-list-item class="mat-list-item-content"><mat-icon>apps</mat-icon>All offers </mat-list-item> 
+        <mat-list-item class="mat-list-item-content"><mat-icon> mobile_screen_share</mat-icon> Mobiles & Tablets </mat-list-item> 
+        <mat-list-item class="mat-list-item-content"><mat-icon>memory</mat-icon>Ectronics</mat-list-item> 
+        <mat-list-item class="mat-list-item-content"><mat-icon>desktop_windows</mat-icon>Computer & Gaming</mat-list-item> 
+        <mat-list-item class="mat-list-item-content"><mat-icon>child_friendly</mat-icon>Home & Kitchen</mat-list-item> 
+
+        <mat-list-item><mat-icon>arrow_forward_ios</mat-icon>MORE CATEGORIES</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Men's Fashion</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Women's Fashion</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Toys, Kids' Fashion & more</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Beauty, Health & Daily Needs</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Sports, Fitness & Outdoor</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Car & Motorbike</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Hobbies</mat-list-item> 
+        <mat-list-item class="mat-list-item-content">Books,Media & Music</mat-list-item> 
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content-box" > 
+
+      <div class="img mat-elevation-z8" >        
+        <img src="assets/img/sd.jpg" style="border: 1px solid grey;">    
+          <ul>
+            <li><a href="#">Omron</a></li>
+              <li><a href="#">Swiss Beauty</a></li>
+                <li><a href="#">Floweraura</a></li>
+                  <li><a href="#">Tupperware</a></li>
+                    <li><a href="#">Vayu Publication</a></li>
+          </ul>        
+      </div>
+
+
+      <div class="box mat-elevation-z8">
+        <div><img class="pincode-img " src="assets/img/pincode.png"></div>
+          <div style=" text-align: center; margin-top: 180px;"> your delivery pincode </div>               
+            <div><pre style=" text-align: center;">Enter your pincode to check</pre>
+                  <pre style="text-align: center; margin-top: 10px;">availabliy and faster delivery options</pre></div>
+                    <div> <input class="pincode-box" type="text" placeholder="Enter pincode"> </div>
+                      <div><button mat-raised-button >SUBMIT</button></div>
+                        <div style="float: right; margin-top: -35px; margin-left: 20px; margin-right: 30px;"><h2>NEXT</h2></div>
+      </div>   
+      
+    
+     <div class="trending"><h1>TRENDING PRODUCTS</h1></div>
+        <div class="collection">
+          <div class="jewel  mat-elevation-z8"><img src="assets/img/jewel.jpg"><p>isquare jewellery</p><s>Rs.999</s> Rs.9999<span>100% off</span></div>
+            <div class="shirt mat-elevation-z8"><img src="assets/img/shirt.jpg"><p>isquare shirts</p><s>Rs.799</s> Rs.7999<span>100% off</span></div>
+              <div class="shoe mat-elevation-z8"><img src="assets/img/shoe.jpg"><p>isquare shoes</p><s>Rs.599</s> Rs.5999<span>100% off</span></div>
+                <div class="bike mat-elevation-z8"><img src="assets/img/bike.jpg"><p>isquare bikes</p><s>Rs.3999</s> Rs.3999<span>100% off</span></div>
+                  
+        </div>        
+        <div class="two-box">
+          <div class="men mat-elevation-z8"><img src="assets/img/men.jpg"></div>
+            <div class="light mat-elevation-z8"><img src="assets/img/light.jpg"></div>
+        </div>    
+              <div></div>
+
+
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
