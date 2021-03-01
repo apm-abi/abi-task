@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Dictionary</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var tags = [
+        "Abi",
+        "Afzar",
+        "saif",
+        "Abdul",
+        "Hakeem",
+        "deepan",
+        "Vignesh",
+        "karthi",
+      ];
+
+      var n = tags.length;
+
+      function ac(value) {
+        document.getElementById("datalist").innerHTML = "";
+
+        l = value.length;
+
+        for (var i = 0; i < n; i++) {
+          if (tags[i].toLowerCase().indexOf(value.toLowerCase()) > -1) {
+            var node = document.createElement("option");
+            var val = document.createTextNode(tags[i]);
+            node.appendChild(val);
+
+            document.getElementById("datalist").appendChild(node);
+          }
+        }
+      }
+    </script>
+
+    <input type="text" list="datalist" onkeyup="ac(this.value)" />
+
+    <datalist id="datalist">
+      <option value="Abi"></option>
+      <option value="Afzar"></option>
+      <option value="Abdul"></option>
+      <option value="Hakeem"></option>
+      <option value="Saif"></option>
+      <option value="Karthi"></option>
+      <option value="deepan"></option>
+      <option value="vignesh"></option>
+    </datalist>
+  </body>
+</html>

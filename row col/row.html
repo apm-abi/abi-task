@@ -1,0 +1,28 @@
+<html>
+  <title>row column</title>
+  <head>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("no_row").value;
+        var y = document.getElementById("no_column").value;
+
+        for (var i = 0; i < parseInt(x); i++) {
+          var b = document.getElementById("tbl").insertRow(i);
+          for (var j = 0; j < parseInt(y); j++) {
+            var c = b.insertCell(j);
+            c.innerHTML = b + c;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    No.of rows: <input type="number" id="no_row" /><br />
+    <br />
+    No.of columns:<input type="number" id="no_column" /><br />
+    <br />
+    <button id="btn" onclick="myFunction()">click</button>
+
+    <table border="1" id="tbl"></table>
+  </body>
+</html>

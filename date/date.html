@@ -1,0 +1,22 @@
+<html> 
+<head></head> 
+<body> 
+
+<input type="date" id="screen"> 
+<input type="date" id="screen2"> 
+<button onclick="dat()">click</button> 
+
+</body>
+ <script> function dat() 
+{ 
+var x = new Date(document.getElementById("screen").value);
+ var y = new Date(document.getElementById("screen2").value); 
+var z = y.getDate() - x.getDate(); 
+var z= Math.floor((Date.UTC(y.getFullYear(), y.getMonth(), y.getDate()) - Date.UTC(x.getFullYear(), x.getMonth(), x.getDate()) ) /(1000 * 60 * 60 * 24)); 
+
+alert(Math.abs(z)); alert(z); 
+}
+ </script> 
+</body> 
+</html>
+

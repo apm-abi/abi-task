@@ -1,0 +1,22 @@
+<html>
+<title></title>
+<head>
+<script>
+function myFunction(){
+    var a = document.getElementById("inp").value;
+    var b = a.split(",");
+    var c = (Math.max.apply(null,b));
+    count = 0;
+    for(i=0;i<=b.length;i++){
+        
+        if(b[i]==c){
+            count++;
+        }
+    }document.write(count);
+}
+</script>
+</head>
+<body>
+    
+</body>
+</html>

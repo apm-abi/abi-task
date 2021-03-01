@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <style>
+            .outer-box {
+          height: 300px;
+          width: 300;
+          border: 1px solid black;
+          display: flex;
+          flex-direction: column;
+        }
+        .outer-box-1 {
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+        .outer-box-2 {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        .input input {
+          outline: none;
+        }
+        .button {
+          height: 50px;
+          width: 100px;
+        }
+        </style>       
+    </head>
+    <body>
+        <script>
+            function staircase() {
+              var a = Number(document.querySelector("input").value);
+              var width = 100;     
+              for (let i = 0; i < a; i++) {
+                var d = document.createElement("div");
+                d.style.width = width + "px";
+                width = width + 100;
+                d.style.height = "100px";
+                d.style.backgroundColor = "red";
+                document.getElementById("step").appendChild(d);
+              }
+            }
+          </script>
+            <div class="box"></div>
+          </div>
+          <div class="outer-box">
+            <div class="outer-box-1">
+              <div class="outer-box-2">
+                <div class="input"><input type="number" /></div>
+                <div class="button">
+                  <button onclick="staircase()">click here</button>
+                </div>
+              </div>
+              <div id="step"></div>       
+            </div>
+          </div>            
+    </body>
+</html>
