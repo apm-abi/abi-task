@@ -1,0 +1,195 @@
+<html>
+<head>
+    <title>Space Clicker</title>
+</head>
+
+<body>
+    <!-- <script>
+
+    function click() {
+        var clicks = 0;
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    }
+    </script>
+
+    <button type="button" onClick="click()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+
+<script>
+
+    // function jersy() {
+      //   let b = document.createElement("div");
+      //   let c = document.createElement("div");
+
+      //   b.style.width = "250px";
+      //   b.style.height = "50px";
+      //   b.style.border = "1px solid black";
+      //   b.innerText = "dhoni jersy was added sucessfullly";
+
+      //   var button = document.getElementById("jer");
+      //   count = 0;
+      //   button.onclick = function () {
+      //     count += 1;
+
+      //     document.querySelector(".add-card").appendChild(b);
+      //     document.querySelector(".add-card").appendChild(c);
+      //   };
+      // }
+
+      // function bottle() {
+      //   let b = document.createElement("div");
+      //   let c = document.createElement("div");
+      //   b.style.width = "250px";
+      //   b.style.height = "50px";
+      //   b.style.border = "1px solid black";
+      //   b.innerText = "dhoni bottle was added sucessfullly";
+
+      //   document.querySelector(".add-card").appendChild(b);
+      //   document.querySelector(".add-card").appendChild(c);
+      // }
+      // function bed() {
+      //   let b = document.createElement("div");
+      //   let c = document.createElement("div");
+
+      //   b.style.width = "250px";
+      //   b.style.height = "50px";
+      //   b.style.border = "1px solid black";
+      //   b.innerText = "dhoni bed was added sucessfullly";
+
+      //   document.querySelector(".add-card").appendChild(b);
+      //   document.querySelector(".add-card").appendChild(c);
+      // }
+
+      // function start here
+
+      
+    function add(akkeem) {
+          let boxx = document.createElement("div");
+          boxx.classList.add("raina");
+
+          boxx.style.height = "338px";
+          let a = document.createElement("img");
+          let b = document.createElement("p");
+          let c = document.createElement("span");
+          let d = document.createElement("button");
+
+          a.src = "raina.jpeg";
+          a.style.width = "200px";
+          a.style.height = "180px";
+
+          b.innerText = " The Muthoot group..The Muthoot Fincorp..";
+          b.style.textAlign = "center";
+
+          c.style.width = "80px";
+          c.style.height = "50px";
+          c.innerText = "Rs.400";
+          c.style.marginLeft = "20px";
+          c.style.marginTop = "130px";
+
+          d.style.width = "100px";
+          d.style.height = "50px";
+          d.innerText = "Add to card";
+          d.style.backgroundColor = "black";
+          d.style.color = "white";
+          d.style.marginLeft = "20px";
+
+          boxx.appendChild(a);
+          boxx.appendChild(b);
+          boxx.appendChild(c);
+          boxx.appendChild(d);
+
+          akkeem.appendChild(boxx);
+        }
+        // var card = [];
+        //   let para = document.querySelector(".para").value;
+        //   let p = document.createElement("span");
+        //   p.appendChild(para);
+        // //  card.push(p);
+        // e.appendChild(p);
+
+        // let c = {
+        //   para:elpara.value
+        // }
+        
+      
+</script> -->
+<script>               
+var arr = [];
+
+function add() {
+   var inp = document.getElementById('num');
+   arr.push(inp.value);
+   inp.value = '';
+}
+
+function show() {
+   var html = '';
+   for (var i=0; i<arr.length; i++) {
+      html += '<div>' + arr[i] + '</div>';
+   }
+   var con = document.getElementById('container');
+   con.innerHTML = html;
+}
+
+
+var array = ["a", "b", "c", "d"];
+        var selectList= document.querySelector(".mango");
+        // Create and append select list
+        var selectList = document.createElement("select");
+        selectList.id = "mySelect";
+        myParent.appendChild(selectList);
+
+        //Create and append the options
+        for (var i = 0; i < array.length; i++) {
+          var option = document.createElement("option");
+          option.value = array[i];
+          option.text = array[i];
+          selectList.appendChild(option);
+        }
+
+</script>
+
+<input type="text" id="num" />
+<input type="button" onclick="add();" value="add" />
+<br />
+<input type="button" onclick="show();" value="show" />
+<div id="container"></div>
+<!-- <div class="outer-box"> -->
+        <!-- jersy section -->
+        <!-- <div class="dhoni">
+            <img src="dhoni.jpg" alt="" />
+            <span>JS Boy's & Men's Regular Fit Jersey</span>
+            <div class="bottom">
+              <span>Rs.400</span>
+              <button onclick="jersy()" id="jer">Add to card</button>
+            </div>
+          </div>
+          bottle section
+          <div class="dhoni">
+            <img src="bottle.jpg" alt="" />
+            <span>MS Dhoni Sipper Bottle Get It Dhoni Bottle</span>
+            <div class="bottom">
+              <span>Rs.400</span>
+              <button onclick="bottle()">Add to card</button>
+            </div>
+          </div>
+          wall-bed section
+          <div class="dhoni">
+            <img src="bed.jpg" alt="" />
+            <span>Impression Wall Decor Indian Captain MS Dhoni</span>
+            <div class="bottom">
+              <span>Rs.400</span>
+              <button onclick="bed()">Add to card</button>
+            </div>
+          </div> -->
+        <!-- <div class="raina"></div>
+          <div class="raina"></div>
+          <div class="raina"></div> -->
+        <!--<div class="raina"></div>  -->
+        <!-- </div> -->
+        
+    
+</body>
+</html>

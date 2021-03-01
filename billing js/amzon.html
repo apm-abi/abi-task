@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>E-commerse site</title>
+  <link rel="stylesheet" href="amazon.css" />
+</head>
+<body onload="box1()">
+  <!-- sidebar section -->
+  <div class="sidebar">
+    <div class="add-card"></div>
+  </div>
+  <div class="full-box">
+    <!-- header section -->
+    <div class="header">
+      <div class="amazon">
+        <img src="amazon.png" alt="" href="card.HTML" />
+      </div>
+      <div class="search-box">
+        <input class="search" type="search" placeholder="search ur products" />
+        <input class="all" type="text" placeholder="Abdul" />
+      </div>
+      <div class="card"><img src="card.jpg" alt="" /></div>
+      <div class="sign-in"><img src="signin.png" alt="" /></div>
+      <!-- <input type="text" class="para" />
+        <button onclick="add()">ok</button> -->
+      <input type="number" class="count" />
+      <button onclick="box1()">yes</button>
+      <input type="text" placeholder="para" id="num" />
+      <img src="" class="img" />
+      <input type="button" onclick="add1();" value="add" />
+      <!-- <input type="button" onclick="show();" value="show" /> -->
+    </div>
+    <!-- content section -->
+    <div class="content">
+      <!-- <div id="container"></div> -->
+    </div>
+    <div class="footer">we welcomes you</div>
+  </div>
+  <script>
+    var arr = [];
+    function add() {
+      var inp = document.getElementById("num");
+      let ip = inp.value;
+      var img = document.querySelector(".img");
+      let ig = img.src;
+      arr.push(ip);
+      arr.push(ig);
+      inp.value = "";
+      var html;
+      for (var i = 0; i < arr.length; i++) {
+        html += "<div>" + arr[i] + "</div>";
+      }
+      var con = document.createElement("p");
+      var i = document.createElement("img");
+      let out = document.querySelector(".outer-box");
+      out.appendChild(con);
+      out.appendChild(i);
+      out.innerHTML = html;
+    }
+    function box1() {
+      let n = document.querySelector(".count").value;
+      for (let i = 0; i < n; i++) {
+        let e = document.createElement("div");
+        e.classList.add("outer-box");
+        e.style.width = "200px";
+        e.style.height = "338px";
+        e.style.border = "1px solid black";
+        document.querySelector(".content").appendChild(e);
+      }
+    }
+  </script>
+</body>
+</html>

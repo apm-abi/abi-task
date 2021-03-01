@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+      .total {
+        margin-top: 280px;
+        width: 187px;
+        border: 1px solid black;
+        height: 200px;
+      }
+    </style>
+    <script>
+      var productList = [];
+      function loadData() {
+        let a = localStorage.getItem("list");
+        if (a) {
+          productList = JSON.parse(a);
+        }
+
+        // for (let i = 0; i < productList.length; i++) {
+        //   let x = productList[i];
+
+        let table = document.querySelector(".list");
+        let rowEl = document.createElement("tr");
+
+        let colAmt = document.createElement("td");
+        let colName = document.createElement("td");
+        let colQty = document.createElement("td");
+        let colTot = document.createElement("td");
+
+        let selectEl = document.createElement("select");
+        colName.appendChild(selectEl);
+
+        let AmtEl = document.createElement("input");
+        AmtEl.type = "number";
+        colAmt.appendChild(AmtEl);
+        let qtyEl = document.createElement("input");
+        qtyEl.type = "number";
+        qtyEl.value = 1;
+        colQty.appendChild(qtyEl);
+        colTot.innerText = 0;
+
+        rowEl.appendChild(colAmt);
+        rowEl.appendChild(colName);
+        rowEl.appendChild(colQty);
+        rowEl.appendChild(colTot);
+
+        table.appendChild(rowEl);
+
+        productList.forEach((x) => {
+          let opEl = document.createElement("option");
+          selectEl.appendChild(opEl);
+          opEl.innerText = x.name;
+        });
+
+        selectEl.value = "";
+
+        selectEl.onchange = () => {
+          console.log("Select Changed", selectEl.value);
+          let x = productList.find((x) => x.name === selectEl.value);
+          AmtEl.value = x.id;
+          let total = x.id * qtyEl.value;
+          colTot.innerText = total;
+        };
+        AmtEl.oninput = () => {
+          let total = AmtEl.value * qtyEl.value;
+          colTot.innerText = total;
+        };
+
+        qtyEl.oninput = () => {
+          let total = AmtEl.value * qtyEl.value;
+          colTot.innerText = total;
+        };
+
+      }
+
+      function save() {
+        alert("ur details was saved");
+      }
+    </script>
+  </head>
+  <body onload="loadData()">
+    Bill No:1
+    <table class="list">
+      <tr class="heading">
+        <th>AMOUNT</th>
+        <th>NAME</th>
+        <th>QTY</th>
+        <th>Total</th>
+        <th>
+          <a href="product page.html">
+            <button>Go back</button>
+          </a>
+        </th>
+        <th>
+          <button onclick="loadData()">Add</button>
+        </th>
+      </tr>
+      <tr class="row">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+
+
+    <div class="total">
+      <label class="lab-tot">total</label>
+      <input type="number" class="tot" />
+      <label class="lab-tax">Tax</label>
+      <input type="text" class="tax" />
+      <label>Tax.Amt</label>
+      <input type="number" class="tax-amt" />
+      <label>Total.Amt</label>
+      <input type="number" class="total-amt" />
+      <button onclick="save()">save</button>
+    </div>
+  </body>
+</html>

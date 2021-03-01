@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title> </title>
+    <link rel="stylesheet" href="product page.css" />
+   
+    <script>
+      var productList = [];
+
+      function loadTable() {
+        let table = document.querySelector(".list");
+        
+        let trList = table.querySelectorAll("tr");
+        for (let i = 1; i < trList.length; i++) {
+          let trEl = trList[i];
+          trEl.parentElement.removeChild(trEl);
+        }
+      
+        for (let i = 0; i < productList.length; i++) {
+          let x = productList[i];
+
+          let rowEl = document.createElement("tr");
+
+          let colID = document.createElement("td");
+          let colName = document.createElement("td");
+
+          let colaction = document.createElement("td");
+          let but = document.createElement("button");
+          but.innerText = "Del";
+          but.onclick = delrow;
+          colaction.appendChild(but);
+
+          colID.innerText = x.id;
+          colName.innerText = x.name;
+
+          rowEl.appendChild(colID);
+          rowEl.appendChild(colName);
+          rowEl.appendChild(colaction);
+          table.appendChild(rowEl);
+        }
+      }
+      function addNew() {
+        let NameEl = document.querySelector(".name");
+        let idEl = document.querySelector(".Amt");
+
+        let x = {
+          id: idEl.value,
+          name: NameEl.value,
+        };
+        productList.push(x);
+        loadTable();
+        let list = JSON.stringify(productList);
+        localStorage.setItem("list", list);
+      }
+      function loadData() {
+        let a = localStorage.getItem("list");
+        if (a) {
+          productList = JSON.parse(a);
+        }
+      }
+      function delrow($event) {
+        let b = $event.target;
+        let tab = b.parentElement.parentElement;
+        tab.parentElement.removeChild(tab);
+      }
+      function clearstorage() {
+        localStorage.clear();
+      }
+    </script>
+  </head>
+  <body onload="loadData();loadTable();">
+    <div class="form">
+      <input type="number" placeholder="Enter Amount" class="Amt" />
+      <input type="text" placeholder="Enter product Name" class="name" />
+      <button onclick="addNew()">Add</button>
+      <button onclick="clearstorage()">clear</button>
+      <a href="billing screen.html">
+        <button>Bill</button>
+      </a>
+    </div>
+
+    <table class="list">
+      <tr class="heading">
+        <th>AMOUNT</th>
+        <th>NAME</th>
+        <th>Actions</th>
+      </tr>
+      <tr class="row">
+        <td>AA</td>
+        <td>1</td>
+        <td>del</td>
+      </tr>
+    </table>
+  </body>
+</html>

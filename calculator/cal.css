@@ -1,0 +1,30 @@
+.outer-box1 {
+  height: 550px;
+  width: 400;
+  border: 1px solid black;
+  margin-left: 35%;
+  margin-top: 3%;
+}
+.display {
+  height: 50px;
+  width: 400;
+  border-bottom: 1px solid black;
+}
+.first-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.first-box button {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first-box button:nth-child(4) {
+  border-right: none;
+}
+
