@@ -39,14 +39,16 @@ export class ProductComponent {
   // tslint:disable-next-line:align
   tab() {
     this.rows = [];
+
     for (let i = 0; i < this.row; i++) {
       this.rows.push('');
     }
     this.cols = [];
-    for (let k = 0; k < this.col; k++) {
-      this.rows.push('');
-    }    
+    let d = this.col;
+    this.cols.push(d);
+
   }
+ 
 }
 
 
