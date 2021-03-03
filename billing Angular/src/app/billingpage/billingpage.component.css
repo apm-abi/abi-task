@@ -1,4 +1,11 @@
-input {
+mat-input {
     width: 50px;
     margin-left: 40px;
+}
+button {
+    margin-left: 38px;
+    margin-top: -7px;
+}
+.example-full-width {
+    width: 50px;
 }

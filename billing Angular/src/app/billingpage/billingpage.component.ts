@@ -1,3 +1,4 @@
+import { NgForOf } from '@angular/common';
 import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillingpageComponent {
 
-  list = [];
+  list: any = [];
+  add: any;
   constructor() {
       const li = localStorage.getItem('lis');
       if (li) {
         this.list = JSON.parse(li);
     }
   }
-  
+ // tslint:disable-next-line:typedef
+ sum(){
+   this.add = this.list.reduce((a: number, b: any) => {
+       // tslint:disable-next-line:radix
+       return a + parseInt(b.p);
+     }, 0);
+ }
 }

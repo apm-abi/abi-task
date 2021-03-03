@@ -1,5 +1,12 @@
+<!-- <input type="text"  -->
 
-<table>
+<mat-form-field class="example-full-width">
+  <mat-label>price tot</mat-label>
+  <input [ngModel]="this.add" matInput >
+</mat-form-field>
+<button (click)="sum()" mat-stroked-button color="primary">sum</button>
+
+<!-- <table>
     <tr>
       <th>name</th>
       <th>price</th>
@@ -8,9 +15,7 @@
       <td>{{i.n}}</td>
       <th>{{i.p}}</th>     
     </tr>
-  </table>
-  <input type="text" >
-
+  </table> -->
 
 
   
