@@ -14,7 +14,7 @@
     <th>Qty</th>
     <th>Total</th>
   </tr>
-  <tr>
+  <tr >
     <td><mat-form-field appearance="fill">
       <mat-label>Favorite food name</mat-label>
       <mat-select>
@@ -22,7 +22,10 @@
           {{f.n}}
         </mat-option>
       </mat-select>
-    </mat-form-field></td>
+    </mat-form-field>
+  </td>
+  <td *ngFor="let i of list" ></td>
+  <td></td>
   </tr>
   </table>                           
 

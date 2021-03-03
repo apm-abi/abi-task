@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -36,6 +37,7 @@ export class ProductComponent {
     // tslint:disable-next-line:align
     this.list.splice(index, 1);
   }
+
   // tslint:disable-next-line:align
   tab() {
     this.rows = [];
@@ -46,7 +48,6 @@ export class ProductComponent {
     this.cols = [];
     let d = this.col;
     this.cols.push(d);
-
   }
  
 }

@@ -11,7 +11,7 @@ import { BillingpageComponent } from '../billingpage/billingpage.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 
-const routes: Routes = [{ path: 'dummy', component: BillingpageComponent }];
+const routes: Routes = [{ path: 'go to bill', component: BillingpageComponent }];
 @NgModule({
   declarations: [ProductComponent, BillingpageComponent],
   imports: [

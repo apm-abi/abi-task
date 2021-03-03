@@ -25,3 +25,6 @@ export class BillingpageComponent {
      }, 0);
  }
 }
+
+
+

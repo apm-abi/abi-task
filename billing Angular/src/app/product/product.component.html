@@ -19,8 +19,7 @@
   </mat-form-field>
   <button (click)="tab()" mat-raised-button color="primary">ok</button>
 
-  <!-- <a routerLink="dummy"></a> -->
-  <a [routerLink]="['/dummy']" routerLinkActive="router-link-active">
+  <a [routerLink]="['/go to bill']" routerLinkActive="router-link-active">
     <button mat-raised-button color="primary">Bill</button></a>
 
   <table ngClass=table>
@@ -30,20 +29,22 @@
       <th>Action</th>
     </tr>
     <tr *ngFor="let i of list">
+    <div *ngIf="i.n != 0 && i.p != 0">
       <td>{{i.n}}</td>
-      <td>{{i.p}}</td>
+      <td>{{i.p}}</td>  
       <td><button (click)="remove(i)" mat-stroked-button color="primary"> Del</button></td>
+    </div>
     </tr>   
   </table>
 
-  <table>
+  <!-- <table>
     <tr>
       <th></th>
     </tr>
     <tr *ngFor="let j of rows">
       <td>9</td>
     </tr>
-  </table>
+  </table> -->
 
 
 
