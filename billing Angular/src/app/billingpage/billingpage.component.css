@@ -3,9 +3,13 @@ mat-input {
     margin-left: 40px;
 }
 button {
-    margin-left: 38px;
+    margin-left: 18px;
     margin-top: -7px;
 }
 .example-full-width {
     width: 50px;
+}
+.mat-form-field {
+    margin-left: 59px;
+    margin-top: -15px;
 }
