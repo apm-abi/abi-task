@@ -19,7 +19,9 @@
   </mat-form-field>
   <button (click)="tab()" mat-raised-button color="primary">ok</button>
 
-  <a routerLink="dummy"><button mat-raised-button color="primary">Bill</button></a>
+  <!-- <a routerLink="dummy"></a> -->
+  <a [routerLink]="['/dummy']" routerLinkActive="router-link-active">
+    <button mat-raised-button color="primary">Bill</button></a>
 
   <table ngClass=table>
      <tr>

@@ -9,22 +9,21 @@ import {MatIconModule} from '@angular/material/icon';
 import { FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProductModule } from './productmodule/productmodule.module';
-import { BillingmoduleModule } from './billingmodule/billingmodule.module';
-import { DummyComponent } from './dummy/dummy.component';
-import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
-const routes: Routes = [
-  { path: 'dummy', component: DummyComponent }
-];
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DummyComponent
   ],
   imports: [
-    BrowserModule, FormsModule, CommonModule, ProductModule, BillingmoduleModule,
-    MatIconModule, AppRoutingModule, RouterModule.forRoot(routes),
+    BrowserModule, FormsModule, CommonModule, ProductModule,
+     MatButtonModule, MatFormFieldModule, MatInputModule,
+    MatIconModule, AppRoutingModule, MatSelectModule,
     BrowserAnimationsModule
   ],
   providers: [],
