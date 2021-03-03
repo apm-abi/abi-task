@@ -15,5 +15,5 @@ export class BillingpageComponent {
         this.list = JSON.parse(li);
     }
   }
-  // tslint:disable-next-line:align
+  
 }
