@@ -1,7 +1,7 @@
 import { NgForOf } from '@angular/common';
 import { BOOL_TYPE } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
-
+  
 @Component({
   selector: 'app-billingpage',
   templateUrl: './billingpage.component.html',
@@ -12,6 +12,7 @@ export class BillingpageComponent {
   add: any;
   qty: number;
   price: number;
+  row: any;
   constructor() {
     const li = localStorage.getItem('lis');
     if (li) {
@@ -24,5 +25,10 @@ export class BillingpageComponent {
       // tslint:disable-next-line:radix
       return a + parseInt(b.p);
     }, 0);
+  }
+  // tslint:disable-next-line:typedef
+  addd(){
+    // tslint:disable-next-line:no-unused-expression
+    this.row();
   }
 }
