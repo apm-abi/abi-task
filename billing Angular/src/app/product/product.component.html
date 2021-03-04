@@ -1,53 +1,56 @@
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter fruit name</mat-label>
-    <input [(ngModel)]="fname" matInput placeholder="Ex. chicken" type="text" >
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter the price </mat-label>
-    <input [(ngModel)]="fprice"  matInput placeholder="Ex. 500$" type="number">
-  </mat-form-field>
-  
-  <button (click)="add()" mat-raised-button color="primary">Add</button>
+<mat-form-field class="example-full-width">
+  <mat-label>Enter fruit name</mat-label>
+  <input [(ngModel)]="fname" matInput placeholder="Ex. chicken" type="text" />
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Enter the price </mat-label>
+  <input [(ngModel)]="fprice" matInput placeholder="Ex. 500$" type="number" />
+</mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter row </mat-label>
-    <input [(ngModel)]="row" matInput placeholder="Ex. chicken" type="text" >
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <mat-label>Enter col </mat-label>
-    <input [(ngModel)]="col"  matInput placeholder="Ex. 500$" type="number">
-  </mat-form-field>
-  <button (click)="tab()" mat-raised-button color="primary">ok</button>
+<button (click)="add()" mat-raised-button color="primary">Add</button>
 
-  <a [routerLink]="['/go to bill']" routerLinkActive="router-link-active">
-    <button mat-raised-button color="primary">Bill</button></a>
+<mat-form-field class="example-full-width">
+  <mat-label>Enter row </mat-label>
+  <input [(ngModel)]="row" matInput placeholder="Ex. chicken" type="text" />
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Enter col </mat-label>
+  <input [(ngModel)]="col" matInput placeholder="Ex. 500$" type="number" />
+</mat-form-field>
+<button (click)="tab()" mat-raised-button color="primary">ok</button>
 
-  <table ngClass=table>
-     <tr>
-      <th>name</th>
-      <th>price</th>
-      <th>Action</th>
-    </tr>
-    <tr *ngFor="let i of list">
-    <div *ngIf="i.n != 0 && i.p != 0">
-      <td>{{i.n}}</td>
-      <td>{{i.p}}</td>  
-      <td><button (click)="remove(i)" mat-stroked-button color="primary"> Del</button></td>
-    </div>
-    </tr>   
-  </table>
+<a [routerLink]="['/go to bill']" routerLinkActive="router-link-active">
+  <button mat-raised-button color="primary">Bill</button></a
+>
+<table border="1" class="tab-product">
+  <tr>
+    <th>name</th>
+    <th>price</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let i of list">
+    <ng-container *ngIf="i.n != 0 && i.p != 0">
+      <td>{{ i.n }}</td>
+      <td>{{ i.p }}</td>
+      <td>
+        <button (click)="remove(i)" mat-stroked-button color="primary">
+          Del
+        </button>
+      </td>
+    </ng-container>
+  </tr>
+</table>
 
-  <!-- <table>
+<table>
     <tr>
-      <th></th>
+      <th>name</th>
     </tr>
-    <tr *ngFor="let j of rows">
-      <td>9</td>
+    <tr *ngFor="let i of rows">
+      <td>1</td>
     </tr>
-  </table> -->
+    <tr *ngFor="let j of cols"> 
+      <td>2</td>
 
+    </tr>
 
-
-
-  
-
+  </table>

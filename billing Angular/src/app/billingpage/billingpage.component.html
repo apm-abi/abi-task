@@ -2,33 +2,34 @@
 
 <mat-form-field class="example-full-width">
   <mat-label>price tot</mat-label>
-  <input [ngModel]="this.add" matInput >
+  <input [ngModel]="this.add" matInput />
 </mat-form-field>
 <button (click)="sum()" mat-stroked-button color="primary">sum</button>
 
-<div>     
+<div>
   <table>
-    <tr>                
-    <th>Name</th>
-    <th>Price</th>
-    <th>Qty</th>
-    <th>Total</th>
-  </tr>
-  <tr >
-    <td><mat-form-field appearance="fill">
-      <mat-label>Favorite food name</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let f of list" [value]="f.value">
-          {{f.n}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </td>
-  <td *ngFor="let i of list" ></td>
-  <td></td>
-  </tr>
-  </table>                           
-
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Qty</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>
+        <!-- <mat-form-field appearance="fill"> -->
+        <!-- <label>Favorite food name</label> -->
+        <select>
+          <option *ngFor="let f of list" [value]="f.value">
+            {{ f.n }}
+          </option>
+        </select>
+        <!-- </mat-form-field> -->
+      </td>
+      <td><input type="text" [(ngModel)]="qty" ></td>
+      <td><input type="text" [(ngModel)]="price" ></td>
+      <td><input type="text" value="{{ qty * price }}" /></td>
+    </tr>
+  </table>
 </div>
 <!-- <table>
     <tr>
@@ -40,6 +41,3 @@
       <th>{{i.p}}</th>     
     </tr>
   </table> -->
-
-
-  

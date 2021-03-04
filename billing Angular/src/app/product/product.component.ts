@@ -11,7 +11,6 @@ export class ProductComponent {
   fprice = '';
   row = 0;
   col = 0;
-
   rows = [];
   cols = [];
 
@@ -30,14 +29,15 @@ export class ProductComponent {
     };
     this.list.push(h);
     localStorage.setItem('lis', JSON.stringify(this.list));
+
   }
   // tslint:disable-next-line:typedef
   remove(list) {
     const index = this.list.indexOf(list);
     // tslint:disable-next-line:align
     this.list.splice(index, 1);
+    localStorage.setItem('lie', JSON.stringify(this.list));
   }
-
   // tslint:disable-next-line:align
   tab() {
     this.rows = [];
@@ -46,10 +46,11 @@ export class ProductComponent {
       this.rows.push('');
     }
     this.cols = [];
-    let d = this.col;
-    this.cols.push(d);
+    for (let j = 0; j < this.col; j++) {
+    // let d = this.col * this.col;
+    this.cols.push('');
+    }
   }
- 
 }
 
 
