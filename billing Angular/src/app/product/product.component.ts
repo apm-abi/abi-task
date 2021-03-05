@@ -39,6 +39,7 @@ export class ProductComponent {
 
   }
   // tslint:disable-next-line:align
+  // tslint:disable-next-line:typedef
   tab() {
     this.rows = [];
 
@@ -52,3 +53,4 @@ export class ProductComponent {
     }
   }
 }
+

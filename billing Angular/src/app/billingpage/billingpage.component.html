@@ -15,21 +15,23 @@
       <th>Total</th>
     </tr>
   
-    
-    <tr [ngModel]="this.row">
-      <td>
-        <mat-form-field appearance="fill">
-        <label>Favorite food name</label> 
-        <mat-select>
-          <mat-option *ngFor="let k of list" [value]="k.value">
+    <tr >
+      <td >
+        <select>
+          <option *ngFor="let k of list">
             {{ k.n }}
-          </mat-option>
-        </mat-select>
-        </mat-form-field>
+          </option>
+        </select>
       </td>
-      <td><input type="text" [(ngModel)]="price" ></td>
-      <td><input type="text" [(ngModel)]="qty" ></td>
-      <td><input type="text" value="{{ qty * price }}" /></td>
+      <td> 
+        <select>
+        <option *ngFor="let k of list">
+          {{ k.p }}
+        </option>
+      </select>
+    </td>
+      <td><input type="number" [(ngModel)]="qty"></td>
+      <td><input type="number" value="{{qty * this.list.p}}"/></td>
     </tr>
   </table>
 </div>

@@ -11,7 +11,6 @@ export class BillingpageComponent {
   list: any = [];
   add: any;
   qty: number;
-  price: number;
   row: any;
   constructor() {
     const li = localStorage.getItem('lis');
@@ -29,6 +28,5 @@ export class BillingpageComponent {
   // tslint:disable-next-line:typedef
   addd(){
     // tslint:disable-next-line:no-unused-expression
-    this.row();
   }
 }
