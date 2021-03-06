@@ -14,28 +14,34 @@
       <th>Qty</th>
       <th>Total</th>
     </tr>
-  
-    <tr >
+
+<ng-container >          
+    <tr *ngFor="let j of exam">
       <td >
         <select>
-          <option *ngFor="let k of list">
-            {{ k.n }}
+          <option *ngFor="let i of list">
+            {{ i.n }}
           </option>
         </select>
       </td>
-      <td> 
-        <select>
-        <option *ngFor="let k of list">
-          {{ k.p }}
-        </option>
-      </select>
-    </td>
-      <td><input type="number" [(ngModel)]="qty"></td>
-      <td><input type="number" value="{{qty * this.list.p}}"/></td>
+      <td>
+        <input type="number" />
+      </td>
+      <td><input type="number" [(ngModel)]="qty" /></td>
+      <td>{{ qty * list.p }}</td>
     </tr>
+  </ng-container>
   </table>
 </div>
 <button (click)="addd()" mat-stroked-button color="primary">addrow</button>
+
+<!-- <ng-container>
+  <div *ngFor="let i of test">
+    <input type="text" [(ngModel)]="i.a" />
+    <input type="text" [(ngModel)]="i.a" />
+  </div>
+  <div>{{ te() }}</div>
+</ng-container> -->
 
 <!-- <table>
     <tr>
@@ -47,3 +53,17 @@
       <th>{{i.p}}</th>     
     </tr>
   </table> -->
+
+  <!-- <table>
+    <tr>
+      <th>name</th>
+      <th>qty</th>
+      <th>total</th>
+    </tr>
+    <tr *ngFor="let i of exam">
+      <td> <input type="text" [(ngModel)]="name" value="{{i.name}}"> </td>
+      <td><input type="number" [(ngModel)]="quans" value="{{i.quans}}"></td>
+      <td><input type="number" [(ngModel)]="total" value="{{i.tot}}"></td>
+    </tr>
+  </table> -->
+<!-- <button (click)="kootu()">kootu</button> -->

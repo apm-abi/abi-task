@@ -1,0 +1,20 @@
+<div class="item-box">
+  <div>
+    <input type="text" placeholder="Enter name" [(ngModel)]="name">
+    <input type="number" placeholder="Enter price" [(ngModel)]="price">
+    <button (click)="addItem()">Add</button>
+  </div>
+
+  <div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor="let x of appService.itemlist">
+        <td>{{x.name}}</td>
+        <td>{{x.price}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

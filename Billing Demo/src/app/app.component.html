@@ -1,0 +1,32 @@
+<app-item></app-item>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Qty</th>
+    <th>Total</th>
+  </tr>
+  <tr *ngFor="let n of nlist;let ind=index">
+    <td>
+      <select [(ngModel)]="n.name" (change)="onChangeName(n)">
+        <option *ngFor="let x of appService.itemlist">{{x.name}}</option>
+      </select>
+    </td>
+    <td>
+      <input type="number" placeholder="enter price {{ind+1}}" [(ngModel)]="n.price">
+    </td>
+    <td>
+      <input type="number" placeholder="enter qty {{ind+1}}" [(ngModel)]="n.qty">
+    </td>
+    <td style="width:200px;text-align:center;">
+      {{n.price * n.qty}}
+    </td>
+  </tr>
+
+</table>
+<button (click)="addRow()">Add row</button>
+
+<h1>
+  total is {{getTotal()}}
+</h1>
