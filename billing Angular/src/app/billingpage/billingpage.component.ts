@@ -9,55 +9,53 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillingpageComponent {
 
-  list: any = [];
+  productarray: any = [];
   add: any;
   row: any;
   qty: number;
-
-  exam = [];
-  test = [
-    {
-      a: '',
-      b: 0,
-    },
-    {
-      a: '',
-      b: 0,
-    },
-    {
-      a: '',
-      b: 0,
-    },
-  ];
-
-
+  billarray = [];
   constructor() {
     const li = localStorage.getItem('lis');
     if (li) {
-      this.list = JSON.parse(li);
+      this.productarray = JSON.parse(li);
+    }
+    const billlocal = localStorage.getItem('bill');
+    if (billlocal) {
+      this.billarray = JSON.parse(billlocal);
     }
   }
   // tslint:disable-next-line:typedef
-  te(){
-    return(JSON.stringify(this.test));
-  }
   // tslint:disable-next-line:typedef
   sum() {
-    this.add = this.list.reduce((a: number, b: any) => {
+    this.add = this.productarray.reduce((a: number, b: any) => {
       // tslint:disable-next-line:radix
       return a + parseInt(b.p);
     }, 0);
   }
 // tslint:disable-next-line:typedef
 addd(){
-  let rowdata ={
+  let data = {
     fname: '',
     fprice: ''
   };
-  this.exam.push(rowdata);
-  localStorage.setItem('lis', JSON.stringify(this.exam));
+  this.billarray.push(data);
+  localStorage.setItem('bill', JSON.stringify(this.billarray));
+}
+// tslint:disable-next-line:typedef
+// onChangeName(j: any) {
+//   console.log('changes', j);
+//   const name = j.fname;
+//   // tslint:disable-next-line:no-shadowed-variable
+//   const x = this.billarray.find(x => x.fname === name);
+//   j.fprice = x.fprice;
+// }
+// tslint:disable-next-line:typedef
+removebill(billarray) {
+  const index = this.billarray.indexOf(billarray);
+  // tslint:disable-next-line:align
+  this.billarray.splice(index, 1);
+  localStorage.setItem('bill', JSON.stringify(this.billarray));
 
 }
-}
 
-3
+}

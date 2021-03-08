@@ -13,57 +13,29 @@
       <th>Price</th>
       <th>Qty</th>
       <th>Total</th>
+      <th>Action</th>
     </tr>
 
 <ng-container >          
-    <tr *ngFor="let j of exam">
+    <tr *ngFor="let j of billarray">
       <td >
-        <select>
-          <option *ngFor="let i of list">
+        <select >
+          <option *ngFor="let i of productarray">
             {{ i.n }}
           </option>
         </select>
       </td>
       <td>
-        <input type="number" />
+        <input type="number" >
       </td>
-      <td><input type="number" [(ngModel)]="qty" /></td>
-      <td>{{ qty * list.p }}</td>
+      <td><input type="number" /></td>
+      <td></td>
+      <td >
+        <button (click)="removebill(j)" mat-stroked-button color="primary">del</button>
+      </td>
     </tr>
   </ng-container>
   </table>
 </div>
 <button (click)="addd()" mat-stroked-button color="primary">addrow</button>
 
-<!-- <ng-container>
-  <div *ngFor="let i of test">
-    <input type="text" [(ngModel)]="i.a" />
-    <input type="text" [(ngModel)]="i.a" />
-  </div>
-  <div>{{ te() }}</div>
-</ng-container> -->
-
-<!-- <table>
-    <tr>
-      <th>name</th>
-      <th>price</th>
-    </tr>
-    <tr *ngFor="let i of list">
-      <td>{{i.n}}</td>
-      <th>{{i.p}}</th>     
-    </tr>
-  </table> -->
-
-  <!-- <table>
-    <tr>
-      <th>name</th>
-      <th>qty</th>
-      <th>total</th>
-    </tr>
-    <tr *ngFor="let i of exam">
-      <td> <input type="text" [(ngModel)]="name" value="{{i.name}}"> </td>
-      <td><input type="number" [(ngModel)]="quans" value="{{i.quans}}"></td>
-      <td><input type="number" [(ngModel)]="total" value="{{i.tot}}"></td>
-    </tr>
-  </table> -->
-<!-- <button (click)="kootu()">kootu</button> -->

@@ -14,11 +14,11 @@ export class ProductComponent {
   rows = [];
   cols = [];
 
-  list = [];
+  productarray = [];
   constructor() {
     const li = localStorage.getItem('lis');
     if (li) {
-      this.list = JSON.parse(li);
+      this.productarray = JSON.parse(li);
     }
   }
   // tslint:disable-next-line:typedef
@@ -27,15 +27,15 @@ export class ProductComponent {
       n: this.fname,
       p: this.fprice,
     };
-    this.list.push(h);
-    localStorage.setItem('lis', JSON.stringify(this.list));
+    this.productarray.push(h);
+    localStorage.setItem('lis', JSON.stringify(this.productarray));
   }
   // tslint:disable-next-line:typedef
-  remove(list) {
-    const index = this.list.indexOf(list);
+  remove(productarray) {
+    const index = this.productarray.indexOf(productarray);
     // tslint:disable-next-line:align
-    this.list.splice(index, 1);
-    localStorage.setItem('lis', JSON.stringify(this.list));
+    this.productarray.splice(index, 1);
+    localStorage.setItem('lis', JSON.stringify(this.productarray));
 
   }
   // tslint:disable-next-line:align

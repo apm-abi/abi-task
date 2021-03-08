@@ -19,16 +19,13 @@
 </mat-form-field>
 <button (click)="tab()" mat-raised-button color="primary">ok</button>
 
-<a [routerLink]="['/go to bill']" routerLinkActive="router-link-active">
-  <button mat-raised-button color="primary">Bill</button></a
->
 <table border="1" class="tab-product">
   <tr>
     <th>name</th>
     <th>price</th>
     <th>Action</th>
   </tr>
-  <tr *ngFor="let i of list">
+  <tr *ngFor="let i of productarray">
     <ng-container *ngIf="i.n != 0 && i.p != 0">
       <td>{{ i.n }}</td>
       <td>{{ i.p }}</td>
