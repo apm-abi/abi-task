@@ -1,16 +1,16 @@
-*{
-    margin-top: 20px;
-    margin-left: 20px;
+* {
+  margin-top: 20px;
+  margin-left: 20px;
 }
-  .example-full-width {
-    width: 200px;
-  }
-  button {
-    margin-left: 20px;
+.example-full-width {
+  width: 200px;
+}
 
-  }
-  .tab-product th,td {
-padding: 10px;
- }
+.tab-product th {
+  padding: 25px;
+}
 
- 
+/* input{
+  width: 50px;
+}
+  */

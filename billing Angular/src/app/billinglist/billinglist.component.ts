@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './billinglist.component.html',
   styleUrls: ['./billinglist.component.css']
 })
-export class BillinglistComponent implements OnInit {
+export class BillinglistComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
+  // tslint:disable-next-line:typedef
+  add(){
   }
-
+  // tslint:disable-next-line:typedef
+  remove(){
+  }
 }
