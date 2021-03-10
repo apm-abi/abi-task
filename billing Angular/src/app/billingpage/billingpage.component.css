@@ -1,50 +1,56 @@
 h1 {
-    text-shadow: gray;
-    text-decoration-style: solid;
-   
-   }
+  text-shadow: gray;
+  text-decoration-style: solid;
+}
 .outer-box {
-    /* border: 1px solid black; */
-    width: 495px;
-    margin-left: 315px;
-    margin-top: 10px;
+  /* border: 1px solid black; */
+  width: 520px;
+  margin-left: 315px;
+  margin-top: 10px;
 }
 .bill {
-    margin-left: 20px;
-    margin-top: 15px;
+  margin-left: 20px;
+  margin-top: 15px;
 }
 .bill-input {
-    width: 40px;   
+  width: 40px;
 }
 .date {
-    margin-left: 80px;
-    width: 133px;
+  margin-left: 170px;
+  width: 133px;
 }
 mat-input {
-    width: 50px;
-    margin-left: 40px;
+  width: 50px;
+  margin-left: 40px;
 }
 button {
-    margin-left: 15px;
-    margin-top: 0px;
+  margin-left: 15px;
+  margin-top: 0px;
 }
 .example-full-width {
-    width: 50px;
+  width: 50px;
 }
 .mat-form-field {
-    margin-left: 170px;
-    margin-top: -15px;
+  margin-left: 190px;
+  margin-top: -15px;
 }
 .btn {
-    margin-left: 37px;
+  margin-left: 37px;
 }
-th {
-    padding: 25px;
+.table {
+    margin-top: 30px;
+}
+th,
+td {
+  padding: 10px;
+}
+td {
+  text-align: left;
 }
 
-select{
-    width: 80px;
+select {
+  width: 80px;
 }
-input{
-    width: 50px;
+input {
+  width: 50px;
 }

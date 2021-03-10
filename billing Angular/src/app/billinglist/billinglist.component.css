@@ -4,8 +4,11 @@
     margin-left: 218px;
     margin-top: 20px;
 }
-th {
-    padding: 25px;
+th, td {
+    padding: 20px;
+}
+td {
+    text-align: left;
 }
 input {
     width: 130px;

@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent {
   fname = '';
   fprice = '';
+  billno = 0;
   row = 0;
   col = 0;
   rows = [];
@@ -26,6 +27,7 @@ export class ProductComponent {
     const h = {
       n: this.fname,
       p: this.fprice,
+      billnum: this.billno
     };
     this.productarray.push(h);
     localStorage.setItem('lis', JSON.stringify(this.productarray));

@@ -65,7 +65,6 @@ save(){
   this.productarray.push(this.billno);
   localStorage.setItem('lis', JSON.stringify(this.productarray));
 }
-
 }
 
 
