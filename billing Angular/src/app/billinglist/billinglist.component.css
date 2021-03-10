@@ -1,3 +1,9 @@
+.outer-box {
+    border: 1px solid black;
+    width: 657px;
+    margin-left: 218px;
+    margin-top: 20px;
+}
 th {
     padding: 25px;
 }
