@@ -1,10 +1,24 @@
+h1 {
+    text-shadow: gray;
+    text-decoration-style: solid;
+   
+   }
+.outer-box {
+    /* border: 1px solid black; */
+    width: 495px;
+    margin-left: 315px;
+    margin-top: 10px;
+}
 .bill {
     margin-left: 20px;
     margin-top: 15px;
 }
 .bill-input {
-    width: 40px;
-   
+    width: 40px;   
+}
+.date {
+    margin-left: 80px;
+    width: 133px;
 }
 mat-input {
     width: 50px;
@@ -27,6 +41,7 @@ button {
 th {
     padding: 25px;
 }
+
 select{
     width: 80px;
 }

@@ -2,12 +2,27 @@
   margin-top: 20px;
   margin-left: 20px;
 }
+h1 {
+  text-shadow: gray;
+  text-decoration-style: solid;
+ 
+ }
+.outer-box {
+  width: 570px;
+  margin-left: 375px;
+}
 .example-full-width {
   width: 200px;
 }
-
+.mat {
+  margin-left: 50px;
+}
+.btn {
+  margin-left: 10px;
+}
 .tab-product th {
   padding: 25px;
+  width: 120px;
 }
 
 /* input{
