@@ -30,9 +30,9 @@
       <th>Action</th>
     </tr>
     <tr *ngFor="let i of productarray">
-      <ng-container *ngIf="i.n != 0 && i.p != 0">
-        <td>{{ i.n }}</td>
-        <td>{{ i.p }}</td>
+      <ng-container *ngIf="i.name != 0 && i.price != 0">
+        <td>{{ i.name }}</td>
+        <td>{{ i.price }}</td>
         <td>
           <button (click)="remove(i)" mat-stroked-button color="primary">
             Del
