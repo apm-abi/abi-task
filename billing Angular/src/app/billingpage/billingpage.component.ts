@@ -8,12 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./billingpage.component.css'],
 })
 export class BillingpageComponent {
-
-  productarray: any = [];
-  add: any;
-  row: any;
-  qty: number;
-  billarray = [];
   constructor() {
     const li = localStorage.getItem('lis');
     if (li) {
@@ -24,7 +18,14 @@ export class BillingpageComponent {
       this.billarray = JSON.parse(billlocal);
     }
   }
-  // tslint:disable-next-line:typedef
+  productarray: any = [];
+  add: any;
+  row: any;
+  price: number;
+  qty: number;
+  total: number;
+  billno = 0;
+  billarray: any = [];
   // tslint:disable-next-line:typedef
   sum() {
     this.add = this.productarray.reduce((a: number, b: any) => {
@@ -34,20 +35,21 @@ export class BillingpageComponent {
   }
 // tslint:disable-next-line:typedef
 addd(){
-  let data = {
-    fname: '',
-    fprice: ''
+  const data = {
+    name: '',
+    price: '',
+    qty: '',
   };
   this.billarray.push(data);
   localStorage.setItem('bill', JSON.stringify(this.billarray));
 }
 // tslint:disable-next-line:typedef
-// onChangeName(j: any) {
-//   console.log('changes', j);
-//   const name = j.fname;
+// onChangeName(k: any) {
+//   console.log('changes', k);
+//   const name = k.n;
 //   // tslint:disable-next-line:no-shadowed-variable
-//   const x = this.billarray.find(x => x.fname === name);
-//   j.fprice = x.fprice;
+//   const x = this.productarray.find(x => x.n === name);
+//   k.p = x.p;
 // }
 // tslint:disable-next-line:typedef
 removebill(billarray) {
@@ -57,5 +59,13 @@ removebill(billarray) {
   localStorage.setItem('bill', JSON.stringify(this.billarray));
 
 }
+// tslint:disable-next-line:typedef
+save(){
+  this.billno = this.billno + 1;
+  this.productarray.push(this.billno);
+  localStorage.setItem('lis', JSON.stringify(this.productarray));
+}
 
 }
+
+

@@ -1,3 +1,11 @@
+.bill {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.bill-input {
+    width: 40px;
+   
+}
 mat-input {
     width: 50px;
     margin-left: 40px;

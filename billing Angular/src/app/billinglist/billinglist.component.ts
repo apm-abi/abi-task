@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./billinglist.component.css']
 })
 export class BillinglistComponent {
-
-  constructor() { }
+   productarray: any[];
+  constructor() {
+    const li = localStorage.getItem('lis');
+    if (li) {
+      this.productarray = JSON.parse(li);
+    }
+  }
   // tslint:disable-next-line:typedef
   add(){
   }

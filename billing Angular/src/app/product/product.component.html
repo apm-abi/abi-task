@@ -19,7 +19,7 @@
 </mat-form-field>
 <button (click)="tab()" mat-raised-button color="primary">ok</button>
 
-<table  class="tab-product">
+<table border="1" class="tab-product">
   <tr>
     <th>name</th>
     <th>price</th>
@@ -42,10 +42,10 @@
   <tr>
     <th></th>
   </tr>
-  <tr *ngFor="let i of rows">
+  <tr *ngFor="let row of rows">
     <td>1</td>
   </tr>
-  <tr *ngFor="let j of cols">
+  <tr *ngFor="let col of cols">
     <td>2</td>
   </tr>
 </table>

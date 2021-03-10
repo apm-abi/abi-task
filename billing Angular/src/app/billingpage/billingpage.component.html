@@ -1,7 +1,9 @@
 <!-- <input type="text"  -->
 
-
-
+<div class="bill">
+  <label> Bill No: </label>
+  <input type="number" class="bill-input" value="{{ billno }}" disabled />
+</div>
 <div>
   <table>
     <tr>
@@ -12,32 +14,38 @@
       <th>Action</th>
     </tr>
 
-<ng-container >          
-    <tr *ngFor="let j of billarray">
-      <td >
-        <select >
-          <option *ngFor="let i of productarray">
-            {{ i.n }}
-          </option>
-        </select>
-      </td>
-      <td>
-        <input type="number" >
-      </td>
-      <td><input type="number" /></td>
-      <td></td>
-      <td >
-        <button (click)="removebill(j)" mat-stroked-button color="primary">del</button>
-      </td>
-    </tr>
-  </ng-container>
+    <ng-container >
+      <tr *ngFor="let billrow of billarray">
+        <td>
+          <select >
+            <option *ngFor="let product of productarray">
+              {{ product.n }}
+            </option>
+          </select>
+        </td>
+
+        <td>
+          <input type="number"   [(ngModel)]="price" />
+        </td>
+        <td><input type="number" [(ngModel)]="qty" /></td>
+        <td><input type="number" disabled value="{{price*qty}}" [(ngModel)]="total"/></td>
+        <td>
+          <button (click)="removebill(billrow)" mat-stroked-button color="primary">
+            del
+          </button>
+        </td>
+      </tr>
+    </ng-container>
   </table>
 </div>
 <button (click)="addd()" mat-stroked-button color="primary">addrow</button>
 <mat-form-field class="example-full-width">
   <mat-label>total</mat-label>
-  <input [ngModel]="this.add" matInput />
+  <input [ngModel]="this.add" matInput disabled />
 </mat-form-field>
-<button (click)="sum()" mat-stroked-button color="primary" class="btn">sum</button>
-
-
+<button (click)="sum()" mat-stroked-button color="primary" class="btn">
+  sum
+</button>
+<button (click)="save()" mat-stroked-button color="primary" >
+  save
+</button>
