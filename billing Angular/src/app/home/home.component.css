@@ -18,6 +18,11 @@
 .hello p {
   margin-top: -10px;
 }
+h1 {
+ text-shadow: gray;
+ text-decoration-style: solid;
+
+}
 .outer-box1{
 width: 800px;
 height: 470px;
