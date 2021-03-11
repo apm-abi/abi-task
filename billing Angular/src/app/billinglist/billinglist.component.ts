@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './billinglist.component.html',
   styleUrls: ['./billinglist.component.css'],
 })
-export class BillinglistComponent {
+export class BillinglistComponent implements OnInit {
   productarray: any[];
   sno = 0;
-  date;
   billnum;
   total;
   amt;
   action;
+  date: any;
   snum: any;
   constructor() {
     const li = localStorage.getItem('lis');
@@ -21,18 +21,22 @@ export class BillinglistComponent {
     }
   }
   // tslint:disable-next-line:typedef
+  ngOnInit() {
+    this.date = new Date();
+ }
+  // tslint:disable-next-line:typedef
   add() {
     const data = {
-      snum: this.sno,
-      date: this.date,
-      billnumber: this.billnum,
-      tot: this.total,
-      amount: this.amt,
-      action: this.action,
     };
     this.productarray.push(data);
-    this.snum = this.snum + 1;
+    localStorage.setItem('lis', JSON.stringify(this.productarray));
   }
   // tslint:disable-next-line:typedef
-  remove() {}
+  remove(i: any) {
+// const del = this.productarray.indexOf(productarray);
+this.productarray.splice(i, 1);
+localStorage.setItem('lis', JSON.stringify(this.productarray));
+  }
 }
+
+

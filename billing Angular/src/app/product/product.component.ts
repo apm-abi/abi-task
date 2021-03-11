@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent {
   fname = '';
   fprice = '';
+  quantity: number;
   row = 0;
   col = 0;
   rows = [];
@@ -26,9 +27,13 @@ export class ProductComponent {
     const h = {
       name: this.fname,
       price: this.fprice,
+      qty: this.quantity,
     };
-    this.productarray.push(h);
-    localStorage.setItem('lis', JSON.stringify(this.productarray));
+    // if(this.fname && this.fprice)
+    {
+      this.productarray.push(h);
+      localStorage.setItem('lis', JSON.stringify(this.productarray));
+    }
   }
   // tslint:disable-next-line:typedef
   remove(productarray) {

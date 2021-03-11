@@ -5,7 +5,10 @@
   <div class="bill">
     <label> Bill No: </label
     ><input type="number" class="bill-input" value="{{ billnumber }}" disabled />
-    <input type="date" class="date" />
+    <input
+    type="date" class="date"
+    [ngModel]="date | date: 'yyyy-MM-dd'"
+  />
   </div>
   <div class="table">
     <table>
@@ -18,7 +21,7 @@
       </tr>
 
       <ng-container>
-        <tr *ngFor="let row of rowarray">
+        <tr *ngFor="let bill of billarray; let i = index">
           <td>
             <select>
               <option *ngFor="let billrow of billarray">
@@ -27,20 +30,20 @@
             </select>
           </td>
           <td>
-            <input type="number" [(ngModel)]="price" />
+            <input type="number"  [(ngModel)]="bill.pric" />
           </td>
-          <td><input type="number" [(ngModel)]="quantity" /></td>
+          <td>
+            <input type="number" [(ngModel)]="bill.quantity" /></td>
           <td>
             <input
               type="number"
               disabled
-              value="{{ price * quantity }}"
-              [(ngModel)]="total"
+              value="{{ bill.pric * bill.quantity }}"
             />
           </td>
           <td>
             <button
-              (click)="removebill(row)"
+              (click)="removebill(bill)"
               mat-stroked-button
               color="primary"
             >
@@ -52,12 +55,12 @@
     </table>
   </div>
   <button (click)="addd()" mat-stroked-button color="primary">addrow</button>
-  <mat-form-field class="example-full-width">
-    <mat-label>total</mat-label>
-    <input  matInput disabled />
+  <mat-form-field class="example-full-width" >
+    <!-- <mat-label>total</mat-label> -->
+    <input value="{{ total()}}"  matInput disabled />
   </mat-form-field>
-  <button (click)="sum()" mat-stroked-button color="primary" class="btn">
+  <!-- <button (click)="sum()" mat-stroked-button color="primary" class="btn">
     sum
-  </button>
-  <button (click)="save()" mat-stroked-button color="primary">save</button>
+  </button> -->
+  <button (click)="save()" mat-stroked-button color="primary" class="btn">save</button>
 </div>

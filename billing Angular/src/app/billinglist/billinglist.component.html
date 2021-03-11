@@ -11,14 +11,19 @@
       <th>Amt</th>
       <th>Action</th>
     </tr>
-    <tr *ngFor="let i of productarray">
-      <td>{{i.snum}}</td>
-      <td><input type="date"></td>
-      <td></td>
+    <tr *ngFor="let product of productarray; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>
+        <input
+          type="date"
+          [ngModel]="date | date: 'yyyy-MM-dd'"
+        />
+      </td>
+      <td>{{ i + 1 }}</td>
       <td></td>
       <td></td>
       <td>
-        <button (click)="remove()" mat-stroked-button color="primary">
+        <button (click)="remove(i)" mat-stroked-button color="primary">
           Del
         </button>
       </td>
