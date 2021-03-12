@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class BillinglistComponent implements OnInit {
   productarray: any[];
   sno = 0;
-  billnum;
-  total;
-  amt;
-  action;
+  billnum: number;
+  total: number;
+  amt: number;
   date: any;
   snum: any;
   constructor() {
@@ -32,9 +31,9 @@ export class BillinglistComponent implements OnInit {
     localStorage.setItem('lis', JSON.stringify(this.productarray));
   }
   // tslint:disable-next-line:typedef
-  remove(i: any) {
-// const del = this.productarray.indexOf(productarray);
-this.productarray.splice(i, 1);
+  remove(productarray: any) {
+const del = this.productarray.indexOf(productarray);
+this.productarray.splice(del, 1);
 localStorage.setItem('lis', JSON.stringify(this.productarray));
   }
 }
