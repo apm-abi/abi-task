@@ -21,7 +21,7 @@
       </tr>
 
       <ng-container>
-        <tr *ngFor="let bill of billarray; let i = index">
+        <tr *ngFor="let bill of billarray">
           <td>
             <select>
               <option *ngFor="let billrow of billarray">
@@ -57,7 +57,7 @@
   <button (click)="addd()" mat-stroked-button color="primary">addrow</button>
   <mat-form-field class="example-full-width" >
     <!-- <mat-label>total</mat-label> -->
-    <input value="{{ total()}}"  matInput disabled />
+    <input value="{{ tot()}}"  matInput disabled />
   </mat-form-field>
   <!-- <button (click)="sum()" mat-stroked-button color="primary" class="btn">
     sum

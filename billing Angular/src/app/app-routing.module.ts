@@ -11,11 +11,9 @@ const routes: Routes = [
 // loadChildren: () => import('./productmodule/productmodule.module').then(x=>x.ProductModule)
 // }
 {path: '', component: HomeComponent},
-
  { path: 'product',      component: ProductComponent },
   { path: 'billing-page', component: BillingpageComponent },
   { path: 'billing-list', component: BillinglistComponent }
-
 ];
 
 @NgModule({

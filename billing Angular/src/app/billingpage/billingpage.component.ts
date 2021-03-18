@@ -32,10 +32,9 @@ export class BillingpageComponent implements OnInit {
     this.billarray.push(data);
     localStorage.setItem('lis', JSON.stringify(this.billarray));
   }
-
   // tslint:disable-next-line:typedef
-  removebill(billarray: any) {
-    const index = this.billarray.indexOf(billarray);
+  removebill(b: any) {
+    const index = this.billarray.indexOf(b);
     this.billarray.splice(index, 1);
     localStorage.setItem('lis', JSON.stringify(this.billarray));
   }
@@ -46,7 +45,7 @@ export class BillingpageComponent implements OnInit {
     // localStorage.setItem('lis', JSON.stringify(this.billarray));
   }
   // tslint:disable-next-line:typedef
-  total() {
+  tot() {
     let total = 0;
     const b = this.billarray.forEach((x: any) => {
       total += x.pric * x.quantity;
